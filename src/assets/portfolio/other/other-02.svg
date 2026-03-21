@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" fill="none">
+  <defs>
+    <linearGradient id="other02-bg" x1="72" y1="64" x2="1100" y2="1512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0C10" />
+      <stop offset="0.5" stop-color="#17111A" />
+      <stop offset="1" stop-color="#2A1A22" />
+    </linearGradient>
+    <radialGradient id="other02-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(824 356) rotate(125.992) scale(689.174 939.236)">
+      <stop stop-color="#B56A7F" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#B56A7F" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#other02-bg)" />
+  <rect width="1200" height="1600" fill="url(#other02-glow)" />
+  <rect x="58" y="58" width="1084" height="1484" stroke="#F2ECE340" stroke-width="2" />
+  <path d="M232 1280L600 448L968 1280" stroke="#F2ECE320" stroke-width="3"/>
+  <path d="M232 970H968" stroke="#F2ECE320" stroke-width="3"/>
+  <text x="110" y="152" fill="#F2ECE3" font-size="34" font-family="Georgia, serif" letter-spacing="6">PARKER HURST</text>
+  <text x="110" y="1380" fill="#D88C9E" font-size="118" font-family="Georgia, serif" letter-spacing="4">OTHER</text>
+  <text x="110" y="1452" fill="#D8C7B1" font-size="26" font-family="Georgia, serif" letter-spacing="6">STARTER SLOT 02</text>
+</svg>

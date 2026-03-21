@@ -1,0 +1,33 @@
+---
+import type { PortfolioCollection, SportKey } from '../data/portfolio';
+import SidebarNav from './SidebarNav.astro';
+import PhotoViewer from './PhotoViewer.astro';
+import viewerScript from '../scripts/portfolio-viewer.js?url';
+
+interface Props {
+	portfolio: PortfolioCollection;
+}
+
+const { portfolio } = Astro.props;
+const initialSport = portfolio.sports[0]?.key;
+const counts = Object.fromEntries(
+	portfolio.sports.map((sport) => [
+		sport.key,
+		portfolio.photos.filter((photo) => photo.sport === sport.key).length,
+	]),
+) as Record<SportKey, number>;
+const initialTotal = initialSport ? counts[initialSport] : 0;
+const initialCounter = `${String(initialTotal ? 1 : 0).padStart(2, '0')} / ${String(initialTotal).padStart(2, '0')}`;
+---
+
+<div class="portfolio-shell" data-portfolio-root data-initial-sport={initialSport}>
+	<SidebarNav
+		sports={portfolio.sports}
+		counts={counts}
+		initialSport={initialSport}
+		initialCounter={initialCounter}
+	/>
+	<PhotoViewer sports={portfolio.sports} photos={portfolio.photos} initialSport={initialSport} />
+</div>
+
+<script type="module" src={viewerScript}></script>

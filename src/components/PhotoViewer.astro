@@ -1,0 +1,49 @@
+---
+import type { PortfolioPhoto, SportConfig, SportKey } from '../data/portfolio';
+import ArrowControls from './ArrowControls.astro';
+
+interface Props {
+	sports: SportConfig[];
+	photos: PortfolioPhoto[];
+	initialSport?: SportKey;
+}
+
+const { sports, photos, initialSport } = Astro.props;
+---
+
+<main class="viewer-shell">
+	<div class="viewer-stage" data-viewer-stage>
+		<div class="viewer-stack">
+			{sports.map((sport) =>
+				photos
+					.filter((photo) => photo.sport === sport.key)
+					.map((photo, index) => {
+						const isInitiallyVisible = sport.key === initialSport && index === 0;
+
+						return (
+							<figure
+								class:list={['photo-slide', isInitiallyVisible && 'is-active']}
+								data-photo
+								data-sport={photo.sport}
+								data-index={index}
+								aria-hidden={isInitiallyVisible ? 'false' : 'true'}
+								hidden={!isInitiallyVisible}
+							>
+								<div class="photo-frame" data-viewer-frame>
+									<img
+										src={photo.src}
+										alt={photo.alt}
+										loading={isInitiallyVisible ? 'eager' : 'lazy'}
+										decoding="async"
+										fetchpriority={isInitiallyVisible ? 'high' : 'auto'}
+									/>
+								</div>
+							</figure>
+						);
+					}),
+			)}
+		</div>
+
+		<ArrowControls />
+	</div>
+</main>

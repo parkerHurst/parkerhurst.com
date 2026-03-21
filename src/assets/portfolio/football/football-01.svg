@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" fill="none">
+  <defs>
+    <linearGradient id="football01-bg" x1="76" y1="68" x2="1654" y2="1132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0D11" />
+      <stop offset="0.56" stop-color="#141922" />
+      <stop offset="1" stop-color="#1D2430" />
+    </linearGradient>
+    <radialGradient id="football01-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1438 290) rotate(133.602) scale(718.614 1036.1)">
+      <stop stop-color="#C39052" stop-opacity="0.48" />
+      <stop offset="1" stop-color="#C39052" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#football01-bg)" />
+  <rect width="1800" height="1200" fill="url(#football01-glow)" />
+  <rect x="70" y="70" width="1660" height="1060" stroke="#F2ECE345" stroke-width="2" />
+  <path d="M108 930C441 747 683 640 1026 542C1243 480 1450 410 1688 289" stroke="#F2ECE32B" stroke-width="3" stroke-dasharray="14 16"/>
+  <text x="112" y="160" fill="#F2ECE3" font-size="40" font-family="Georgia, serif" letter-spacing="7">PARKER HURST</text>
+  <text x="112" y="1038" fill="#E4BB84" font-size="126" font-family="Georgia, serif" letter-spacing="5">FOOTBALL</text>
+  <text x="112" y="1106" fill="#D9C8B1" font-size="28" font-family="Georgia, serif" letter-spacing="6">STARTER SLOT 01</text>
+</svg>

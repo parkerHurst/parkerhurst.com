@@ -1,0 +1,94 @@
+---
+import type { SportConfig, SportKey } from '../data/portfolio';
+
+interface Props {
+	sports: SportConfig[];
+	counts: Record<SportKey, number>;
+	initialSport?: SportKey;
+	initialCounter: string;
+}
+
+const { sports, counts, initialSport, initialCounter } = Astro.props;
+---
+
+<>
+	<header class="mobile-bar">
+		<a class="mobile-brand" href="/">Parker Hurst</a>
+		<div class="mobile-chrome">
+			<p class="portfolio-counter" data-counter aria-live="polite">{initialCounter}</p>
+			<button
+				class="menu-toggle"
+				type="button"
+				data-menu-toggle
+				aria-expanded="false"
+				aria-controls="mobile-portfolio-menu"
+			>
+				Menu
+			</button>
+		</div>
+	</header>
+
+	<div class="mobile-panel" id="mobile-portfolio-menu" data-mobile-panel hidden>
+		<nav class="sidebar-nav" aria-label="Sports portfolio sections">
+			{sports.map((sport) => {
+				const total = counts[sport.key];
+				return (
+					<button
+						class:list={['sidebar-link', sport.key === initialSport && 'is-active']}
+						type="button"
+						data-sport-nav
+						data-sport={sport.key}
+						aria-label={`${sport.label} portfolio, ${total} image${total === 1 ? '' : 's'}`}
+						aria-pressed={sport.key === initialSport ? 'true' : 'false'}
+					>
+						<span>{sport.label}</span>
+						<small>{String(total).padStart(2, '0')}</small>
+					</button>
+				);
+			})}
+		</nav>
+
+		<div class="sidebar-contact" aria-label="Contact Parker Hurst">
+			<a href="https://instagram.com/parker._.hurst" target="_blank" rel="noreferrer">
+				Instagram
+			</a>
+			<a href="mailto:me@parkerhurst.com">Email</a>
+		</div>
+	</div>
+
+	<aside class="sidebar-rail">
+		<div class="sidebar-inner">
+			<a class="brand-mark" href="/">Parker Hurst</a>
+
+			<nav class="sidebar-nav" aria-label="Sports portfolio sections">
+				{sports.map((sport) => {
+					const total = counts[sport.key];
+					return (
+						<button
+							class:list={['sidebar-link', sport.key === initialSport && 'is-active']}
+							type="button"
+							data-sport-nav
+							data-sport={sport.key}
+							aria-label={`${sport.label} portfolio, ${total} image${total === 1 ? '' : 's'}`}
+							aria-pressed={sport.key === initialSport ? 'true' : 'false'}
+						>
+							<span>{sport.label}</span>
+							<small>{String(total).padStart(2, '0')}</small>
+						</button>
+					);
+				})}
+			</nav>
+
+			<div class="sidebar-footer">
+				<p class="portfolio-counter" data-counter aria-live="polite">{initialCounter}</p>
+
+				<div class="sidebar-contact" aria-label="Contact Parker Hurst">
+					<a href="https://instagram.com/parker._.hurst" target="_blank" rel="noreferrer">
+						Instagram
+					</a>
+					<a href="mailto:me@parkerhurst.com">Email</a>
+				</div>
+			</div>
+		</div>
+	</aside>
+</>

@@ -36,7 +36,7 @@ const createPhotos = (
     id: `${sport}-${String(index + 1).padStart(2, "0")}`,
     sport,
     src: `/photos/${label}/${filename}`,
-    alt: `${label} sports photograph ${index + 1} from Parker Hurst's portfolio.`,
+    alt: `${label} ${index + 1} from Parker Hurst's portfolio.`,
   }));
 
 // Keep ordering explicit here. Reorder filenames in these arrays as you continue culling.

@@ -22,9 +22,10 @@ export interface PortfolioCollection {
 
 export const sports: SportConfig[] = [
   { key: "football", label: "Football", order: 0 },
-  { key: "basketball", label: "Basketball", order: 1 },
-  { key: "hockey", label: "Hockey", order: 2 },
-  { key: "soccer", label: "Soccer", order: 3 },
+  { key: "baseball", label: "Baseball", order: 1 },
+  { key: "basketball", label: "Basketball", order: 2 },
+  { key: "hockey", label: "Hockey", order: 3 },
+  { key: "soccer", label: "Soccer", order: 4 },
 ];
 
 const createPhotos = (
@@ -59,6 +60,21 @@ export const photos: PortfolioPhoto[] = [
     "MDVD0279.jpg",
     "MDVD0533.jpg",
     "3D6A1324.jpg",
+  ]),
+  ...createPhotos("baseball", "Baseball", [
+    "MDVD6696.jpg",
+    "MDVD6452.jpg",
+    "MDVD6653.jpg",
+    "MDVD6655.jpg",
+    "MDVD6819.jpg",
+    "MDVD6837.jpg",
+    "MDVD7000.jpg",
+    "MDVD7041.jpg",
+    "MDVD7117.jpg",
+    "MDVD7173.jpg",
+    "MDVD7177.jpg",
+    "MDVD7211.jpg",
+    "MDVD7231.jpg",
   ]),
   ...createPhotos("basketball", "Basketball", [
     "MDVD1127-4.jpg",

@@ -1,4 +1,9 @@
-export type SportKey = "football" | "basketball" | "hockey" | "soccer";
+export type SportKey =
+  | "football"
+  | "baseball"
+  | "basketball"
+  | "hockey"
+  | "soccer";
 
 export interface SportConfig {
   key: SportKey;
@@ -65,6 +70,12 @@ export const photos: PortfolioPhoto[] = [
     "MDVD6696.jpg",
     "MDVD6452.jpg",
     "MDVD6653.jpg",
+    "MDVD8181.jpg",
+    "MDVD8035.jpg",
+    "MDVD7908.jpg",
+    "MDVD7756.jpg",
+    "MDVD7681.jpg",
+    "MDVD8392.jpg",
     "MDVD6655.jpg",
     "MDVD6819.jpg",
     "MDVD6837.jpg",

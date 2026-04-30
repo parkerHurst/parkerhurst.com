@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro';
 import '../styles/global.css';
 
 interface Props {
@@ -43,5 +44,6 @@ const socialImage = ogImage ? new URL(ogImage, site).toString() : undefined;
 	</head>
 	<body>
 		<slot />
+		<Analytics />
 	</body>
 </html>

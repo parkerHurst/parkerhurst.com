@@ -135,6 +135,8 @@ export const photos: PortfolioPhoto[] = [
     "SNY04338.jpg",
     "SNY07317.JPG",
     "SNY08368.JPG",
+    "SNY07317.JPG",
+    "SNY08368.JPG",
   ]),
 ];
 

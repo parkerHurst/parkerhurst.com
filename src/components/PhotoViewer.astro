@@ -31,12 +31,14 @@ const { sports, photos, initialSport } = Astro.props;
 							>
 								<div class="photo-frame" data-viewer-frame>
 									<img
+										class="photo-image"
 										src={photo.src}
 										alt={photo.alt}
 										loading={isInitiallyVisible ? 'eager' : 'lazy'}
 										decoding="async"
 										fetchpriority={isInitiallyVisible ? 'high' : 'auto'}
 									/>
+									<div class="photo-loader" aria-hidden="true"></div>
 								</div>
 							</figure>
 						);

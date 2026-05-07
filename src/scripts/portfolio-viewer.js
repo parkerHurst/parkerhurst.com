@@ -1,5 +1,26 @@
 const root = document.querySelector('[data-portfolio-root]');
 
+const initImageLoaders = () => {
+	const images = document.querySelectorAll('.photo-image');
+
+	for (const img of images) {
+		if (!(img instanceof HTMLImageElement)) {
+			continue;
+		}
+
+		const markLoaded = () => {
+			img.classList.add('is-loaded');
+		};
+
+		if (img.complete && img.naturalWidth > 0) {
+			markLoaded();
+		} else {
+			img.addEventListener('load', markLoaded, { once: true });
+			img.addEventListener('error', markLoaded, { once: true });
+		}
+	}
+};
+
 if (root instanceof HTMLElement) {
 	const navButtons = Array.from(root.querySelectorAll('[data-sport-nav]'));
 	const slides = Array.from(root.querySelectorAll('[data-photo]'));
@@ -54,6 +75,10 @@ if (root instanceof HTMLElement) {
 
 			image.loading = 'eager';
 			image.decoding = 'async';
+
+			if (image.complete && image.naturalWidth > 0) {
+				image.classList.add('is-loaded');
+			}
 		}
 	};
 
@@ -204,4 +229,5 @@ if (root instanceof HTMLElement) {
 	});
 
 	render();
+	initImageLoaders();
 }

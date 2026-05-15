@@ -365,25 +365,4 @@ button {
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .sidebar-inner,
-    .viewer-stage {
-        animation: rise-in 700ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
-    }
 
-    .viewer-stage {
-        animation-delay: 120ms;
-    }
-}
-
-@keyframes rise-in {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}

@@ -1,13 +1,43 @@
 :root {
-    color-scheme: dark;
+    color-scheme: dark light;
     --bg: #0b0b0b;
     --text: #f2ece3;
     --muted: #8d867d;
     --muted-strong: #b4ab9f;
     --accent: #ffffff;
+    --loader-base: #141414;
+    --loader-shimmer: #1c1c1c;
     --font-display:
         "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", serif;
     --font-body: "Source Serif 4", Georgia, serif;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        color-scheme: light;
+        --bg: #FFF;
+        --text: #1a1917;
+        --muted: #918c85;
+        --muted-strong: #5c5852;
+        --accent: #0b0b0b;
+        --loader-base: #f0f0f0;
+        --loader-shimmer: #e4e4e4;
+    }
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+    --bg: #FFF;
+    --text: #1a1917;
+    --muted: #918c85;
+    --muted-strong: #5c5852;
+    --accent: #0b0b0b;
+    --loader-base: #f0f0f0;
+    --loader-shimmer: #e4e4e4;
 }
 
 *,
@@ -216,9 +246,9 @@ button {
     inset: 0;
     background: linear-gradient(
         110deg,
-        #141414 8%,
-        #1c1c1c 18%,
-        #141414 33%
+        var(--loader-base) 8%,
+        var(--loader-shimmer) 18%,
+        var(--loader-base) 33%
     );
     background-size: 200% 100%;
     animation: shimmer 1.6s ease-in-out infinite;
@@ -363,6 +393,51 @@ button {
         width: 3rem;
         height: 3rem;
     }
+
+    .theme-toggle {
+        bottom: 4.5rem;
+    }
+}
+
+/* Theme toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.25rem;
+    z-index: 10;
+    display: flex;
+    border: 1px solid var(--muted);
+    border-radius: 3px;
+    background: var(--bg);
+    opacity: 0.65;
+    transition: opacity 200ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-within {
+    opacity: 1;
+}
+
+.theme-toggle button {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color 160ms ease, background 160ms ease;
+}
+
+.theme-toggle button + button {
+    border-left: 1px solid var(--muted);
+}
+
+.theme-toggle button.is-active {
+    color: var(--text);
+    background: rgba(128, 128, 128, 0.12);
+}
+
+.theme-toggle button:hover:not(.is-active) {
+    color: var(--muted-strong);
 }
 
 

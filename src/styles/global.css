@@ -191,6 +191,21 @@ button {
     color: var(--accent);
 }
 
+.sidebar-bmc {
+    margin-top: 0.45rem;
+}
+
+.sidebar-bmc [data-bmc] {
+    display: grid;
+    justify-content: start;
+}
+
+.sidebar-bmc .bmc-btn {
+    font-size: 0.72rem !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+}
+
 .mobile-bar,
 .mobile-panel {
     display: none;

@@ -1,4 +1,4 @@
-# Agent Context — parkerhurst.com
+# Agent Context - parkerhurst.com
 
 ## Project
 - **Astro v6** static site. No UI frameworks — vanilla JS + Astro components only.

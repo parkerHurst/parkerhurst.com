@@ -408,16 +408,12 @@ button {
         width: 3rem;
         height: 3rem;
     }
-
-    .theme-toggle {
-        bottom: 4.5rem;
-    }
 }
 
 /* Theme toggle */
 .theme-toggle {
     position: fixed;
-    bottom: 1rem;
+    top: 1rem;
     right: 1.25rem;
     z-index: 10;
     display: flex;

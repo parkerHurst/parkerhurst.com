@@ -48,7 +48,24 @@ const { sports, counts, initialSport, initialCounter } = Astro.props;
 			})}
 		</nav>
 
-<div class="sidebar-contact" aria-label="Contact Parker Hurst">
+		<div class="mobile-menu-actions" aria-label="Site preferences and support">
+			<div class="theme-toggle mobile-theme-toggle" data-theme-toggle>
+				<button type="button" data-theme-opt="system">System</button>
+				<button type="button" data-theme-opt="dark">Dark</button>
+				<button type="button" data-theme-opt="light">Light</button>
+			</div>
+
+			<a
+				class="mobile-coffee-link"
+				href="https://www.buymeacoffee.com/parkerHurst"
+				target="_blank"
+				rel="noreferrer"
+			>
+				Buy Me a Coffee
+			</a>
+		</div>
+
+		<div class="sidebar-contact" aria-label="Contact Parker Hurst">
 			<a href="https://instagram.com/parker._.hurst" target="_blank" rel="noreferrer">
 				Instagram
 			</a>

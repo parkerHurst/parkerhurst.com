@@ -53,7 +53,7 @@ const socialImage = ogImage ? new URL(ogImage, site).toString() : undefined;
 			<button type="button" data-theme-opt="light">Light</button>
 		</div>
 		<script is:inline>
-			(function(){var t=document.querySelector('[data-theme-toggle]');var b=t.querySelectorAll('[data-theme-opt]');function g(){return localStorage.getItem('theme')||'system'}function s(v){localStorage.setItem('theme',v);if(v==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',v);u()}function u(){var c=g();b.forEach(function(n){n.classList.toggle('is-active',n.dataset.themeOpt===c)})}b.forEach(function(n){n.addEventListener('click',function(){s(n.dataset.themeOpt)})});u()})();
+			(function(){var b=document.querySelectorAll('[data-theme-opt]');function g(){return localStorage.getItem('theme')||'system'}function s(v){localStorage.setItem('theme',v);if(v==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',v);u()}function u(){var c=g();b.forEach(function(n){n.classList.toggle('is-active',n.dataset.themeOpt===c)})}b.forEach(function(n){n.addEventListener('click',function(){s(n.dataset.themeOpt)})});u()})();
 		</script>
 		<Analytics />
 		<script

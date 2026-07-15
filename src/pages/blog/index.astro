@@ -15,11 +15,8 @@ const formatDate = (date: Date) =>
 const postHref = (id: string) => `/blog/${id}`;
 ---
 
-<BlogLayout title="Blog" description="Writing on photography and process from sports photographer Parker Hurst.">
+<BlogLayout title="Blog">
 	<section class="blog-index" aria-label="Blog articles">
-		<header class="blog-index-header">
-			<h1>Blog</h1>
-		</header>
 		{posts.length > 0 ? (
 			<ol class="post-list">
 				{posts.map((post, index) => (

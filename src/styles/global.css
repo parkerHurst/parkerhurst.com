@@ -567,7 +567,7 @@ button {
 }
 
 .blog-index {
-    padding: clamp(5rem, 10vw, 10rem) 0 clamp(6rem, 10vw, 11rem);
+    padding: 0 0 clamp(6rem, 10vw, 11rem);
 }
 
 .blog-index-header {
@@ -911,10 +911,6 @@ button {
 }
 
 @media (max-width: 720px) {
-    .blog-index {
-        padding-top: 4rem;
-    }
-
     .blog-index-header {
         grid-template-columns: 1fr;
         gap: 1.25rem;

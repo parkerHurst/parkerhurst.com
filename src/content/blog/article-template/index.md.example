@@ -1,0 +1,21 @@
+---
+title: Article Title
+description: A concise summary used on the blog index and in search and social previews.
+publishedAt: 2026-07-12
+# updatedAt: 2026-07-13
+draft: true
+# cover: ./cover.jpg
+# coverAlt: Describe the cover image for readers who cannot see it.
+---
+
+Opening paragraph introducing the article.
+
+## Section Heading
+
+Write the article in Markdown. Images can live beside this file and use relative paths:
+
+<!-- ![Descriptive alternative text](./photo.jpg) -->
+
+> Optional pull quote or notable observation.
+
+Add links, lists, and other standard Markdown as needed.

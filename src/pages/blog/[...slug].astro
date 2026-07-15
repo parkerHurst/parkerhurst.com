@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog', ({ data }) => import.meta.env.DEV || !data.draft);
+
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: { post },
+	}));
+}
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const formatDate = (date: Date) =>
+	new Intl.DateTimeFormat('en-US', {
+		month: 'long',
+		day: 'numeric',
+		year: 'numeric',
+	}).format(date);
+---
+
+<BlogLayout
+	title={post.data.title}
+	description={post.data.description}
+	ogImage={post.data.cover?.src}
+	isArticle
+	publishedAt={post.data.publishedAt}
+	updatedAt={post.data.updatedAt}
+>
+	<article class="blog-article">
+		<header class="article-header">
+			<a class="article-back" href="/blog">All articles</a>
+			<div class="article-dates">
+				<time datetime={post.data.publishedAt.toISOString()}>
+					Published {formatDate(post.data.publishedAt)}
+				</time>
+				{post.data.updatedAt && (
+					<time datetime={post.data.updatedAt.toISOString()}>
+						Updated {formatDate(post.data.updatedAt)}
+					</time>
+				)}
+			</div>
+			<h1>{post.data.title}</h1>
+			<p class="article-description">{post.data.description}</p>
+		</header>
+
+		{post.data.cover && (
+			<figure class="article-cover">
+				<Image
+					src={post.data.cover}
+					alt={post.data.coverAlt ?? ''}
+					widths={[720, 1080, 1440]}
+					sizes="(max-width: 960px) 100vw, 80vw"
+				/>
+				<figcaption>{post.data.coverAlt}</figcaption>
+			</figure>
+		)}
+
+		<div class="prose">
+			<Content />
+		</div>
+	</article>
+</BlogLayout>

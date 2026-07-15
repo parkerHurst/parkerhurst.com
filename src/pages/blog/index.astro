@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+const posts = (await getCollection('blog', ({ data }) => import.meta.env.DEV || !data.draft)).sort(
+	(a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf(),
+);
+const formatDate = (date: Date) =>
+	new Intl.DateTimeFormat('en-US', {
+		month: 'long',
+		day: 'numeric',
+		year: 'numeric',
+	}).format(date);
+const postHref = (id: string) => `/blog/${id}`;
+---
+
+<BlogLayout title="Blog" description="Writing on photography and process from sports photographer Parker Hurst.">
+	<section class="blog-index" aria-label="Blog articles">
+		<header class="blog-index-header">
+			<h1>Blog</h1>
+			<p>Writing on photography, process, and the work behind the images.</p>
+		</header>
+		{posts.length > 0 ? (
+			<ol class="post-list">
+				{posts.map((post, index) => (
+					<li>
+						<a class="post-card" href={postHref(post.id)}>
+							<div class="post-card-copy">
+								<p class="post-number">{String(index + 1).padStart(2, '0')}</p>
+								<div>
+									<time datetime={post.data.publishedAt.toISOString()}>
+										{formatDate(post.data.publishedAt)}
+									</time>
+									<h2>{post.data.title}</h2>
+									<p>{post.data.description}</p>
+								</div>
+							</div>
+							{post.data.cover && (
+								<Image
+									class="post-card-image"
+									src={post.data.cover}
+									alt={post.data.coverAlt ?? ''}
+									widths={[480, 720]}
+									sizes="(max-width: 720px) 100vw, 34vw"
+								/>
+							)}
+						</a>
+					</li>
+				))}
+			</ol>
+		) : (
+			<p class="blog-empty">No articles have been published yet.</p>
+		)}
+	</section>
+</BlogLayout>

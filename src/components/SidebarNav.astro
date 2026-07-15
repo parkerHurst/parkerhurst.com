@@ -29,7 +29,7 @@ const { sports, counts, initialSport, initialCounter } = Astro.props;
 	</header>
 
 	<div class="mobile-panel" id="mobile-portfolio-menu" data-mobile-panel hidden>
-		<nav class="sidebar-nav" aria-label="Sports portfolio sections">
+		<nav class="sidebar-nav" aria-label="Portfolio and site navigation">
 			{sports.map((sport) => {
 				const total = counts[sport.key];
 				return (
@@ -46,6 +46,10 @@ const { sports, counts, initialSport, initialCounter } = Astro.props;
 					</button>
 				);
 			})}
+			<a class="sidebar-link sidebar-page-link" href="/blog">
+				<span>Blog</span>
+				<small>Read</small>
+			</a>
 		</nav>
 
 		<div class="mobile-menu-actions" aria-label="Site preferences and support">
@@ -80,7 +84,7 @@ const { sports, counts, initialSport, initialCounter } = Astro.props;
 		<div class="sidebar-inner">
 			<a class="brand-mark" href="/">Parker Hurst</a>
 
-			<nav class="sidebar-nav" aria-label="Sports portfolio sections">
+			<nav class="sidebar-nav" aria-label="Portfolio and site navigation">
 				{sports.map((sport) => {
 					const total = counts[sport.key];
 					return (
@@ -97,6 +101,10 @@ const { sports, counts, initialSport, initialCounter } = Astro.props;
 						</button>
 					);
 				})}
+				<a class="sidebar-link sidebar-page-link" href="/blog">
+					<span>Blog</span>
+					<small>Read</small>
+				</a>
 			</nav>
 
 			<div class="sidebar-footer">

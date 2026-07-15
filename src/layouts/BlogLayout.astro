@@ -1,0 +1,48 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	ogImage?: string;
+	isArticle?: boolean;
+	publishedAt?: Date;
+	updatedAt?: Date;
+}
+
+const { title, description, ogImage, isArticle = false, publishedAt, updatedAt } = Astro.props;
+const documentTitle = title === 'Blog' ? 'Blog | Parker Hurst' : `${title} | Parker Hurst`;
+---
+
+<BaseLayout
+	title={documentTitle}
+	description={description}
+	ogImage={ogImage}
+	ogType={isArticle ? 'article' : 'website'}
+	publishedAt={publishedAt}
+	updatedAt={updatedAt}
+>
+	<div class="blog-shell">
+		<header class="blog-header">
+			<a class="blog-brand" href="/">Parker Hurst</a>
+			<nav class="blog-nav" aria-label="Primary navigation">
+				<a href="/">Portfolio</a>
+				<a href="/blog" aria-current={Astro.url.pathname.startsWith('/blog') ? 'page' : undefined}>Blog</a>
+			</nav>
+			<div class="theme-toggle blog-theme-toggle" data-theme-toggle aria-label="Color theme">
+				<button type="button" data-theme-opt="system">System</button>
+				<button type="button" data-theme-opt="dark">Dark</button>
+				<button type="button" data-theme-opt="light">Light</button>
+			</div>
+		</header>
+
+		<main class="blog-main">
+			<slot />
+		</main>
+
+		<footer class="blog-footer">
+			<p>&copy; {new Date().getFullYear()} Parker Hurst</p>
+			<a href="mailto:me@parkerhurst.com">Email</a>
+		</footer>
+	</div>
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { Content as GearContent } from '../data/gear.md';
+---
+
+<BlogLayout title="Gear">
+	<section class="gear-index" aria-label="Camera gear">
+		<header class="gear-header">
+			<h1>Gear</h1>
+		</header>
+		<div class="gear-content">
+			<GearContent />
+		</div>
+	</section>
+</BlogLayout>

@@ -28,6 +28,7 @@ const documentTitle = title === 'Blog' ? 'Blog | Parker Hurst' : `${title} | Par
 			<nav class="blog-nav" aria-label="Primary navigation">
 				<a href="/">Portfolio</a>
 				<a href="/blog" aria-current={Astro.url.pathname.startsWith('/blog') ? 'page' : undefined}>Blog</a>
+				<a href="/gear" aria-current={Astro.url.pathname.startsWith('/gear') ? 'page' : undefined}>Gear</a>
 			</nav>
 			<div class="theme-toggle blog-theme-toggle" data-theme-toggle aria-label="Color theme">
 				<button type="button" data-theme-opt="system">System</button>

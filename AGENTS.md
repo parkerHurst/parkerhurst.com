@@ -9,6 +9,7 @@
 - `src/data/portfolio.ts` — source of truth. Defines sports, their order, and photo filenames.
 - Photos live in `/public/photos/{Sport}/` (e.g. `/public/photos/Football/...`).
 - `src/components/PortfolioShell.astro` wires together `SidebarNav` + `PhotoViewer`.
+- `src/pages/gear.astro` renders `src/data/gear.md` at `/gear`. Edit the markdown to change gear: each `##` heading is a category, each list item renders as a grid card.
 - `src/scripts/portfolio-viewer.js` — client-side viewer logic (filtering by sport, prev/next, preloading, keyboard nav, mobile menu).
 - `src/styles/global.css` — all styles. Dark editorial aesthetic (`#0b0b0b` background, warm text).
 

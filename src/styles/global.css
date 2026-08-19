@@ -346,6 +346,20 @@ button {
     cursor: not-allowed;
 }
 
+.copyright-notice {
+    position: fixed;
+    z-index: 4;
+    bottom: 0.8rem;
+    left: 50%;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
 @media (max-width: 960px) {
     .portfolio-shell {
         grid-template-columns: 1fr;

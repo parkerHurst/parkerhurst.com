@@ -203,21 +203,6 @@ button {
     color: var(--accent);
 }
 
-.sidebar-bmc {
-    margin-top: 0.45rem;
-}
-
-.sidebar-bmc [data-bmc] {
-    display: grid;
-    justify-content: start;
-}
-
-.sidebar-bmc .bmc-btn {
-    font-size: 0.72rem !important;
-    padding: 6px 12px !important;
-    border-radius: 4px !important;
-}
-
 .mobile-bar,
 .mobile-panel {
     display: none;
@@ -461,26 +446,6 @@ button {
         border-top: 1px solid color-mix(in srgb, var(--muted) 45%, transparent);
     }
 
-    .mobile-coffee-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 2.4rem;
-        border: 1px solid var(--muted);
-        border-radius: 3px;
-        color: var(--text);
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-    }
-
-    .mobile-coffee-link:hover,
-    .mobile-coffee-link:focus-visible {
-        border-color: var(--accent);
-        color: var(--accent);
-        text-decoration: none;
-    }
-
     .viewer-shell {
         padding: 0.8rem 1rem 1rem 1rem;
     }
@@ -511,12 +476,7 @@ button {
         height: 3rem;
     }
 
-    body > .theme-toggle,
-    #bmc-wbtn,
-    #bmc-wbtn-popup,
-    .bmc-widget,
-    .bmc-btn-container,
-    iframe[src*="buymeacoffee"] {
+    body > .theme-toggle {
         display: none !important;
     }
 }

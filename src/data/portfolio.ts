@@ -4,7 +4,8 @@ export type SportKey =
   | "basketball"
   | "hockey"
   | "lacrosse"
-  | "soccer";
+  | "soccer"
+  | "indycar";
 
 export interface SportConfig {
   key: SportKey;
@@ -33,6 +34,7 @@ export const sports: SportConfig[] = [
   { key: "hockey", label: "Hockey", order: 3 },
   { key: "lacrosse", label: "Lacrosse", order: 4 },
   { key: "soccer", label: "Soccer", order: 5 },
+  { key: "indycar", label: "INDYCAR", order: 6 },
 ];
 
 const createPhotos = (
@@ -137,6 +139,14 @@ export const photos: PortfolioPhoto[] = [
     "SNY08850.jpg",
     "SNY08930.jpg",
     "SNY09261.jpg",
+  ]),
+  ...createPhotos("indycar", "INDYCAR", [
+    "A9_09735.JPG",
+    "A9_00444.JPG",
+    "A9_00676.JPG",
+    "A9_03416.JPG",
+    "A9_03764.JPG",
+    "A9_04750.JPG",
   ]),
 ];
 

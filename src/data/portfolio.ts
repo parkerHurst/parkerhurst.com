@@ -28,9 +28,9 @@ export interface PortfolioCollection {
 }
 
 export const sports: SportConfig[] = [
-  { key: "football", label: "Football", order: 0 },
+  { key: "basketball", label: "Basketball", order: 0 },
   { key: "baseball", label: "Baseball", order: 1 },
-  { key: "basketball", label: "Basketball", order: 2 },
+  { key: "football", label: "Football", order: 2 },
   { key: "hockey", label: "Hockey", order: 3 },
   { key: "lacrosse", label: "Lacrosse", order: 4 },
   { key: "soccer", label: "Soccer", order: 5 },
@@ -52,6 +52,7 @@ const createPhotos = (
 // Keep ordering explicit here. Reorder filenames in these arrays as you continue culling.
 export const photos: PortfolioPhoto[] = [
   ...createPhotos("football", "Football", [
+    "A9_03024.JPG",
     "MDVD0544-3.jpg",
     "MDVD1196.jpg",
     "MDVD0046-3.jpg",

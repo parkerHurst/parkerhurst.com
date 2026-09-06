@@ -142,12 +142,12 @@ export const photos: PortfolioPhoto[] = [
     "SNY09261.jpg",
   ]),
   ...createPhotos("indycar", "INDYCAR", [
+    "A9_04750.JPG",
     "A9_09735.JPG",
     "A9_00444.JPG",
     "A9_00676.JPG",
     "A9_03416.JPG",
     "A9_03764.JPG",
-    "A9_04750.JPG",
   ]),
 ];
 

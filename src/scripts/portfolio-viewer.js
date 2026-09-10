@@ -1,20 +1,4 @@
 const root = document.querySelector('[data-portfolio-root]');
-const mobileNotice = document.querySelector('[data-mobile-notice]');
-
-if (
-	mobileNotice instanceof HTMLDialogElement &&
-	window.matchMedia('(max-width: 600px)').matches
-) {
-	if (!mobileNotice.open) {
-		mobileNotice.showModal();
-	}
-
-	const dismissButton = mobileNotice.querySelector('[data-mobile-notice-dismiss]');
-
-	if (dismissButton instanceof HTMLButtonElement) {
-		dismissButton.addEventListener('click', () => mobileNotice.close());
-	}
-}
 
 const initImageLoaders = () => {
 	const images = document.querySelectorAll('.photo-image');

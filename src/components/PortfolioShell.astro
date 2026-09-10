@@ -30,19 +30,6 @@ const initialCounter = `${String(initialTotal ? 1 : 0).padStart(2, '0')} / ${Str
 	<PhotoViewer sports={portfolio.sports} photos={portfolio.photos} initialSport={initialSport} />
 </div>
 
-<dialog
-	class="mobile-notice"
-	data-mobile-notice
-	aria-labelledby="mobile-notice-title"
-	aria-describedby="mobile-notice-description"
->
-	<div class="mobile-notice-copy">
-		<h1 id="mobile-notice-title">This page is best viewed on a wider screen</h1>
-		<p id="mobile-notice-description">Come back on a desktop, laptop, or tablet</p>
-	</div>
-	<button type="button" data-mobile-notice-dismiss>Continue anyways</button>
-</dialog>
-
 <p class="copyright-notice">© 2026 Parker Hurst Photo LLC</p>
 
 <script type="module" src={viewerScript}></script>

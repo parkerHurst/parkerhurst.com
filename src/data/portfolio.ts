@@ -52,7 +52,7 @@ const createPhotos = (
 // Keep ordering explicit here. Reorder filenames in these arrays as you continue culling.
 export const photos: PortfolioPhoto[] = [
   ...createPhotos("football", "Football", [
-    "A9_03024.JPG",
+    "_A9_6218.jpg",
     "MDVD0544-3.jpg",
     "MDVD1196.jpg",
     "MDVD0046-3.jpg",

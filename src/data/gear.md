@@ -2,11 +2,12 @@
 
 - **[Sony a9 II](https://www.bhphotovideo.com/c/product/1509600-STUD/sony_ilce9m2_b_alpha_a9_ii_mirrorless.html)** (Main Photo Camera)
 - **[iPhone 17 Pro](https://www.apple.com/shop/buy-iphone/iphone-17-pro)** (Main Video Camera)
+- **Canon EOS 1000F N** (Film)
 
 # Lenses
 
 - **[Tamron 28-75mm f/2.8 Di III VXD G2](https://www.bhphotovideo.com/c/product/1658157-REG/tamron_a063_28_75mm_f_2_8_di_iii.html)**
-- **[Sigma 70-200mm f/2.8 DG DN OS Sports Lens](https://www.bhphotovideo.com/c/product/1789139-REG/sigma_70_200mm_f_2_8_dg_is.html)**
+- **[Sigma 70-200mm f/2.8 DG DN OS Sports](https://www.bhphotovideo.com/c/product/1789139-REG/sigma_70_200mm_f_2_8_dg_is.html)**
 
 # Accessories
 

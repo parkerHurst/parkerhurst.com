@@ -6,7 +6,7 @@
 # Lenses
 
 - **[Tamron 28-75mm f/2.8 Di III VXD G2](https://www.bhphotovideo.com/c/product/1658157-REG/tamron_a063_28_75mm_f_2_8_di_iii.html)**
-- **[Sony 70-200mm f/2.8 GM OSS II](https://www.bhphotovideo.com/c/product/803503385-USE/sony_sel70200gm2_fe_70_200mm_f_2_8_gm.html)** (Rented from [Art's Cameras](https://artscameras.com/))
+- **[Sigma 70-200mm f/2.8 DG DN OS Sports Lens](https://www.bhphotovideo.com/c/product/1789139-REG/sigma_70_200mm_f_2_8_dg_is.html)**
 
 # Accessories
 
